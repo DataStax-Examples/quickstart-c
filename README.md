@@ -128,8 +128,7 @@ CassError select_user(CassSession* session, const char* lastname) {
                             &firstname_length);
       cass_value_get_int32(cass_row_get_column_by_name(row, "age"), &age);
 
-      printf("firstname: '%.*s' age: %d\n", (int)firstname_length,
-             firstname, age);
+      printf("firstname: '%.*s' age: %d\n", (int)firstname_length, firstname, age);
     }
 
     cass_result_free(result);
