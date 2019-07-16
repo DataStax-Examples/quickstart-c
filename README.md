@@ -6,8 +6,21 @@ If you are having trouble, the complete code solution for `quickstart.c` can be 
 
 ## Prerequisites
   * A running instance of [Apache Cassandra®](http://cassandra.apache.org/download/) 1.2+
-
   
+## Create the keyspace and table
+The `users.cql` file provides the schema used for this project:
+
+```sql
+CREATE KEYSPACE demo
+    WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'};
+
+CREATE TABLE demo.users (
+    lastname text PRIMARY KEY,
+    age int,
+    city text,
+    email text,
+    firstname text);
+```
 ## Connect to your cluster
 
 All of our code is contained in the `quickstart.c` file. 
