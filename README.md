@@ -11,13 +11,14 @@ If you are having trouble, the complete code solution for `quickstart.c` can be 
 ## Connect to your cluster
 
 All of our code is contained in the `quickstart.c` file. 
-A new  CassCluster object will need to be created and configured to connect a session to our Cassandra instance. The minimal configuration needed to connect is a list of contact points. If you are not using `localhost` for your instance, provide the ip address of of your node in the main() function.
+A new  CassCluster object will need to be created and configured to connect a session to our Cassandra instance. The minimal configuration needed to connect is a list of hosts. If you are not using `localhost` for your instance, provide the ip address of of your node in the main() function.
 ```c
 // TO DO: Fill in your own host 
 int main(int argc, char* argv[]) {
   CassCluster* cluster = NULL;
   CassSession* session = cass_session_new();
   char* hosts = "127.0.0.1";
+  char* keyspace = "demo";
 ```
 
 ## CRUD Operations
@@ -32,7 +33,7 @@ CassError insert_user(CassSession* session, const Users* users) {
   
   // TO DO: execute a simple statement that inserts one user into the table
   const char* query =
-      "INSERT INTO demo.users (lastname, age, city, email, firstname) VALUES (?, ?, ?, ?, ?)";
+      "INSERT INTO users (lastname, age, city, email, firstname) VALUES (?, ?, ?, ?, ?)";
 
   statement = cass_statement_new(query, 5);
 
@@ -64,7 +65,7 @@ CassError select_user(CassSession* session, const char* lastname) {
   CassFuture* future = NULL;
   
   // TO DO: execute a simple statement that retrieves one user from the table
-  const char* query = "SELECT * FROM demo.users WHERE lastname=?";
+  const char* query = "SELECT * FROM users WHERE lastname=?";
 
   statement = cass_statement_new(query, 1);
 
@@ -111,7 +112,7 @@ CassError update_user_age(CassSession* session, const char* lastname, cass_int32
   CassFuture* future = NULL;
   
   // TO DO: execute a simple statement that updates the age of one user
-  const char* query = "UPDATE demo.users SET age =?  WHERE lastname =? ";
+  const char* query = "UPDATE users SET age =?  WHERE lastname =? ";
 
   statement = cass_statement_new(query, 2);
 
@@ -140,7 +141,7 @@ CassError delete_user(CassSession* session, const char* lastname) {
   CassError rc = CASS_OK;
   CassStatement* statement = NULL;
   CassFuture* future = NULL;
-  const char* query = "DELETE FROM demo.users WHERE lastname=?";
+  const char* query = "DELETE FROM users WHERE lastname=?";
 
   statement = cass_statement_new(query, 1);
 
