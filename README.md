@@ -9,7 +9,21 @@ If you are having trouble, the complete code solution for `quickstart.c` can be 
   * [CMake](http://www.cmake.org/download) v2.6.4+
   * [libuv](http://libuv.org/) 1.x
   * [OpenSSL](https://www.openssl.org/) v1.0.x or v1.1.x
-  
+
+## Create the keyspace and table
+The `users.cql` file provides the schema used for this project:
+
+```sql
+CREATE KEYSPACE demo
+    WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'};
+
+CREATE TABLE demo.users (
+    lastname text PRIMARY KEY,
+    age int,
+    city text,
+    email text,
+    firstname text);
+```
 ## Getting the Driver
 You can obtain binary versions of the driver, available for various operating systems and architectures, from our [DataStax download server](https://downloads.datastax.com/cpp-driver/).The driver source code is available via [GitHub](https://github.com/datastax/cpp-driver).The C/C++ driver will build on most standard Unix-like and Microsoft Windows platforms. Packages are available for the following platforms:
 
@@ -29,7 +43,9 @@ make
 make install
 popd
 ```
-For more help with getting dependencies and building the driver from source code on different operating systems, check out the documentation on [building the driver](https://docs.datastax.com/en/developer/cpp-driver/2.13/topics/building/). With the driver installed on Linux/MacOS, you also have the option of generating the quickstart executable with CMake, and the CMake configuration file provided. Follow these steps:
+For more help with getting dependencies and building the driver from source code on different operating systems, check out the documentation on [building the driver](https://docs.datastax.com/en/developer/cpp-driver/2.13/topics/building/). 
+
+Once you have completed filling in the code blocks (with the driver installed on Linux/MacOS) you also have the option of generating the quickstart executable with CMake, and the CMake configuration file provided. Follow these steps:
 * Clone quickstart-c repository
 * `cd quickstart-c`
 * `mkdir build`
@@ -37,21 +53,6 @@ For more help with getting dependencies and building the driver from source code
 * `cmake ..`
 * `make`
 
-  
-## Create the keyspace and table
-The `users.cql` file provides the schema used for this project:
-
-```sql
-CREATE KEYSPACE demo
-    WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'};
-
-CREATE TABLE demo.users (
-    lastname text PRIMARY KEY,
-    age int,
-    city text,
-    email text,
-    firstname text);
-```
 ## Connect to your cluster
 
 All of our code is contained in the `quickstart.c` file. 
