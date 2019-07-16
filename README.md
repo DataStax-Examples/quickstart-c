@@ -29,7 +29,14 @@ make
 make install
 popd
 ```
-For more help with getting dependencies and building the driver from source code on different operating systems, check out the documentation on [building the driver](https://docs.datastax.com/en/developer/cpp-driver/2.13/topics/building/).
+For more help with getting dependencies and building the driver from source code on different operating systems, check out the documentation on [building the driver](https://docs.datastax.com/en/developer/cpp-driver/2.13/topics/building/). With the driver installed on Linux/MacOS, you also have the option of generating the quickstart executable with CMake, and the CMake configuration file provided. Follow these steps:
+* Clone quickstart-c repository
+* `cd quickstart-c`
+* `mkdir build`
+* `cd build`
+* `cmake ..`
+* `make`
+
   
 ## Create the keyspace and table
 The `users.cql` file provides the schema used for this project:
