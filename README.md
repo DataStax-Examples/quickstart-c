@@ -57,7 +57,7 @@ CassError insert_user(CassSession* session, const Users* users) {
 ```
 ### SELECT a user
 ```c
-// TO DO: execute a prepared that retrieves one user from the table
+// TO DO: execute a simple statement that retrieves one user from the table
 CassError select_user(CassSession* session, const char* lastname) {
   CassError rc = CASS_OK;
   CassStatement* statement = NULL;
