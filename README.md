@@ -6,6 +6,22 @@ If you are having trouble, the complete code solution for `quickstart.c` can be 
 
 ## Prerequisites
   * A running instance of [Apache Cassandra®](http://cassandra.apache.org/download/) 1.2+
+  * [CMake](http://www.cmake.org/download) v2.6.4+
+  * [libuv](http://libuv.org/) 1.x
+  * [OpenSSL](https://www.openssl.org/) v1.0.x or v1.1.x
+  
+## Getting the Driver
+The driver source code is available via [GitHub].The C/C++ driver will build on most standard Unix-like and Microsoft Windows platforms. Packages are available for the following platforms:
+
+* [CentOS 6](https://downloads.datastax.com/cpp-driver/centos/6/cassandra/)
+* [CentOS 7](https://downloads.datastax.com/cpp-driver/centos/7/cassandra/)
+* [Ubuntu 14.04 LTS](https://downloads.datastax.com/cpp-driver//ubuntu/14.04/cassandra)
+* [Ubuntu 16.04 LTS](https://downloads.datastax.com/cpp-driver//ubuntu/16.04/cassandra)
+* [Ubuntu 18.04 LTS](https://downloads.datastax.com/cpp-driver//ubuntu/18.04/cassandra)
+* [Windows](https://downloads.datastax.com/cpp-driver//windows/cassandra)
+
+
+
   
 ## Create the keyspace and table
 The `users.cql` file provides the schema used for this project:
