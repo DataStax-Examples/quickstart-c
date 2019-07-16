@@ -11,7 +11,7 @@ If you are having trouble, the complete code solution for `quickstart.c` can be 
 ## Connect to your cluster
 
 All of our code is contained in the `quickstart.c` file. 
-A new  CassCluster object will need to be created and configured to connect a seesion to our Cassandra instance, and a new session through the `connect_session()` function. The minimal configuration needed to connect is a list of contact points. If you are not using `localhost` for your instance, provide the ip address of of your node in the main() function.
+A new  CassCluster object will need to be created and configured to connect a session to our Cassandra instance. The minimal configuration needed to connect is a list of contact points. If you are not using `localhost` for your instance, provide the ip address of of your node in the main() function.
 ```c
 // TO DO: Fill in your own host 
 int main(int argc, char* argv[]) {
