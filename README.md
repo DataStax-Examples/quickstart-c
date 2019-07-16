@@ -11,7 +11,7 @@ If you are having trouble, the complete code solution for `quickstart.c` can be 
   * [OpenSSL](https://www.openssl.org/) v1.0.x or v1.1.x
   
 ## Getting the Driver
-The driver source code is available via [GitHub](https://github.com/datastax/cpp-driver).The C/C++ driver will build on most standard Unix-like and Microsoft Windows platforms. Packages are available for the following platforms:
+You can obtain binary versions of the driver, available for various operating systems and architectures, from our [DataStax download server](https://downloads.datastax.com/cpp-driver/).The driver source code is available via [GitHub](https://github.com/datastax/cpp-driver).The C/C++ driver will build on most standard Unix-like and Microsoft Windows platforms. Packages are available for the following platforms:
 
 * [CentOS 6](https://downloads.datastax.com/cpp-driver/centos/6/cassandra/)
 * [CentOS 7](https://downloads.datastax.com/cpp-driver/centos/7/cassandra/)
@@ -20,8 +20,16 @@ The driver source code is available via [GitHub](https://github.com/datastax/cpp
 * [Ubuntu 18.04 LTS](https://downloads.datastax.com/cpp-driver//ubuntu/18.04/cassandra)
 * [Windows](https://downloads.datastax.com/cpp-driver//windows/cassandra)
 
-
-
+If you are on MacOS, once you have the source code and nescesaary dependencies, you can build the driver with CMake:
+```
+mkdir build
+pushd build
+cmake ..
+make
+make install
+popd
+```
+For more help with getting dependencies and building the driver from source code on different operating systems, check out the documentation on [Building](https://docs.datastax.com/en/developer/cpp-driver/2.13/topics/building/) the driver.
   
 ## Create the keyspace and table
 The `users.cql` file provides the schema used for this project:
