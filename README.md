@@ -21,7 +21,7 @@ You can obtain binary versions of the driver, available for various operating sy
 * [Windows](https://downloads.datastax.com/cpp-driver//windows/cassandra)
 
 If you are on MacOS, once you have the source code and nescesaary dependencies, you can build the driver with CMake:
-```
+```bash
 mkdir build
 pushd build
 cmake ..
