@@ -29,7 +29,7 @@ make
 make install
 popd
 ```
-For more help with getting dependencies and building the driver from source code on different operating systems, check out the documentation on [Building](https://docs.datastax.com/en/developer/cpp-driver/2.13/topics/building/) the driver.
+For more help with getting dependencies and building the driver from source code on different operating systems, check out the documentation on [building the driver](https://docs.datastax.com/en/developer/cpp-driver/2.13/topics/building/).
   
 ## Create the keyspace and table
 The `users.cql` file provides the schema used for this project:
