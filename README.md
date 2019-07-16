@@ -11,7 +11,7 @@ If you are having trouble, the complete code solution for `quickstart.c` can be 
   * [OpenSSL](https://www.openssl.org/) v1.0.x or v1.1.x
   
 ## Getting the Driver
-The driver source code is available via [GitHub].The C/C++ driver will build on most standard Unix-like and Microsoft Windows platforms. Packages are available for the following platforms:
+The driver source code is available via [GitHub](https://github.com/datastax/cpp-driver).The C/C++ driver will build on most standard Unix-like and Microsoft Windows platforms. Packages are available for the following platforms:
 
 * [CentOS 6](https://downloads.datastax.com/cpp-driver/centos/6/cassandra/)
 * [CentOS 7](https://downloads.datastax.com/cpp-driver/centos/7/cassandra/)
