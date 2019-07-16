@@ -25,11 +25,12 @@ Fill the code in the functions that will add a user, get a user, update a user a
 
 ### INSERT a user
 ```javascript
-// TO DO: execute a simple statement that inserts one user into the table
 CassError insert_user(CassSession* session, const Users* users) {
   CassError rc = CASS_OK;
   CassStatement* statement = NULL;
   CassFuture* future = NULL;
+  
+  // TO DO: execute a simple statement that inserts one user into the table
   const char* query =
       "INSERT INTO demo.users (lastname, age, city, email, firstname) VALUES (?, ?, ?, ?, ?)";
 
@@ -57,11 +58,12 @@ CassError insert_user(CassSession* session, const Users* users) {
 ```
 ### SELECT a user
 ```c
-// TO DO: execute a simple statement that retrieves one user from the table
 CassError select_user(CassSession* session, const char* lastname) {
   CassError rc = CASS_OK;
   CassStatement* statement = NULL;
   CassFuture* future = NULL;
+  
+  // TO DO: execute a simple statement that retrieves one user from the table
   const char* query = "SELECT * FROM demo.users WHERE lastname=?";
 
   statement = cass_statement_new(query, 1);
@@ -103,11 +105,12 @@ CassError select_user(CassSession* session, const char* lastname) {
 
 ### UPDATE a user's age
 ```c
-// TO DO: execute a simple statement that updates the age of one user
 CassError update_user_age(CassSession* session, const char* lastname, cass_int32_t age) {
   CassError rc = CASS_OK;
   CassStatement* statement = NULL;
   CassFuture* future = NULL;
+  
+  // TO DO: execute a simple statement that updates the age of one user
   const char* query = "UPDATE demo.users SET age =?  WHERE lastname =? ";
 
   statement = cass_statement_new(query, 2);
