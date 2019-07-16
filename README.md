@@ -86,6 +86,7 @@ CassError select_user(CassSession* session, const char* lastname) {
       size_t firstname_length = 0;
       cass_int32_t age = 0;
 
+      //TO DO: print firstname and age of user
       cass_value_get_string(cass_row_get_column_by_name(row, "firstname"), &firstname,
                             &firstname_length);
       cass_value_get_int32(cass_row_get_column_by_name(row, "age"), &age);
