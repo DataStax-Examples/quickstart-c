@@ -44,7 +44,7 @@ make
 make install
 popd
 ```
-For more help with getting dependencies and building the driver from source code on different operating systems, check out the documentation on [building the driver](https://docs.datastax.com/en/developer/cpp-driver/2.13/topics/building/). 
+For more help with getting dependencies and building the driver from source code on different operating systems, check out the documentation on [building the driver]https://docs.datastax.com/en/developer/cpp-driver/latest/topics/building/). 
 
 Once you have completed filling in the code blocks (with the driver installed on Linux/MacOS) you also have the option of generating the quickstart executable with CMake, and the CMake configuration file provided. Follow these steps:
 * Clone quickstart-c repository
@@ -158,7 +158,7 @@ CassError update_user_age(CassSession* session, const char* lastname, cass_int32
   CassFuture* future = NULL;
   
   // TO DO: execute a simple statement that updates the age of one user
-  const char* query = "UPDATE users SET age =?  WHERE lastname =? ";
+  const char* query = "UPDATE users SET age =? WHERE lastname =?";
 
   statement = cass_statement_new(query, 2);
 
