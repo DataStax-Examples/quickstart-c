@@ -44,7 +44,7 @@ make
 make install
 popd
 ```
-For more help with getting dependencies and building the driver from source code on different operating systems, check out the documentation on [building the driver]https://docs.datastax.com/en/developer/cpp-driver/latest/topics/building/). 
+For more help with getting dependencies and building the driver from source code on different operating systems, check out the documentation on [building the driver](https://docs.datastax.com/en/developer/cpp-driver/latest/topics/building/). 
 
 Once you have completed filling in the code blocks (with the driver installed on Linux/MacOS) you also have the option of generating the quickstart executable with CMake, and the CMake configuration file provided. Follow these steps:
 * Clone quickstart-c repository
