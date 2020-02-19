@@ -5,6 +5,8 @@ A basic demo CRUD application using the DataStax C/C++ Driver for Apache Cassand
 The intent is to help users get up and running quickly with the driver. 
 If you are having trouble, the complete code solution for `quickstart.c` can be found [here](https://gist.github.com/beccam/bcb2fdb81db931abb0d175ba0356c1fc).
 
+Contributors: [Rebecca Mills](https://github.com/beccam)
+
 ## Prerequisites
   * A running instance of [Apache Cassandra®](http://cassandra.apache.org/download/) 1.2+
   * [CMake](http://www.cmake.org/download) v2.6.4+
