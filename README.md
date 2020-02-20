@@ -1,11 +1,15 @@
 # DataStax C/C++ Driver for Apache Cassandra Quickstart
 [![Build Status](https://travis-ci.org/beccam/quickstart-c.svg?branch=master)](https://travis-ci.org/beccam/quickstart-c)
 
-A basic demo CRUD application using the DataStax C/C++ Driver for Apache Cassandra. 
-The intent is to help users get up and running quickly with the driver. 
+A basic demo CRUD application using the DataStax C/C++ Driver for Apache Cassandra.  
 If you are having trouble, the complete code solution for `quickstart.c` can be found [here](https://gist.github.com/beccam/bcb2fdb81db931abb0d175ba0356c1fc).
 
 Contributors: [Rebecca Mills](https://github.com/beccam)
+
+## Objectives
+
+* To demonstrate how to perform basic CRUD operations with the DataStax C/C++ Driver.
+* The intent is to help users get up and running quickly with the driver. 
 
 ## Prerequisites
   * A running instance of [Apache Cassandra®](http://cassandra.apache.org/download/) 1.2+
