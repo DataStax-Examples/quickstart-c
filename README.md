@@ -11,6 +11,11 @@ Contributors: [Rebecca Mills](https://github.com/beccam)
 * To demonstrate how to perform basic CRUD operations with the DataStax C/C++ Driver.
 * The intent is to help users get up and running quickly with the driver. 
 
+## Project Layout
+
+* [quickstart.c](src/quickstart.c) - main application file with space to fill in CRUD operation code
+* [users.cql](users.cql) - Use this file to create the schema 
+
 ## Prerequisites
   * A running instance of [Apache Cassandra®](http://cassandra.apache.org/download/) 1.2+
   * [CMake](http://www.cmake.org/download) v2.6.4+
